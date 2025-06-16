@@ -3,7 +3,35 @@
 <body>
     <p>Hello</p>
     <img src="tony.png" alt="Tony Stark" width="500">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="display: none;">Hidden Link</a>
+    <style>
+  #emoji {
+    font-size: 48px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  button {
+    background-color: #ff5c8a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #ff3b6d;
+  }
+</style>
+
+<script>
+  const emojis = ["❤️", "💫", "😄", "🌟", "🎉", "🥳", "🐱", "✨", "💖", "🌈", "🔥"];
+  function showRandomEmoji() {
+    const random = emojis[Math.floor(Math.random() * emojis.length)];
+    document.getElementById('emoji').textContent = random;
+  }
+</script>
+
 
 </body>
 </html>
