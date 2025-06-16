@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <p>Hello</p>
-    <img src="tony.png" alt="Tony Stark" width="500">
+<head>
     <style>
   #emoji {
     font-size: 48px;
     margin-top: 20px;
     text-align: center;
   }
-  button {
+  .surprise-btn {
     background-color: #ff5c8a;
     color: white;
     border: none;
@@ -19,19 +17,24 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-  button:hover {
+  .surprise-btn:hover {
     background-color: #ff3b6d;
   }
 </style>
 
 <script>
-  const emojis = ["❤️", "💫", "😄", "🌟", "🎉", "🥳", "🐱", "✨", "💖", "🌈", "🔥"];
   function showRandomEmoji() {
+    const emojis = ["❤️", "💫", "😄", "🌟", "🎉", "🥳", "🐱", "✨", "💖", "🌈", "🔥"];
     const random = emojis[Math.floor(Math.random() * emojis.length)];
     document.getElementById('emoji').textContent = random;
   }
 </script>
 
-
+</head>
+<body>
+    <p>Hello</p>
+    <button class="surprise-btn" onclick="showRandomEmoji()">💖 Surprise Me</button>
+    <div id="emoji"></div>
+    <img src="tony.png" alt="Tony Stark" width="500">
 </body>
 </html>
